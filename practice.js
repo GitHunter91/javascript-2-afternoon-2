@@ -17,7 +17,10 @@ var arr = [10,20,30];
   Return the first item in the given array.
 */
 
-//Code Here
+const first = (arr) => {
+  return arr[0];
+}
+
 
 
 
@@ -32,7 +35,7 @@ var arr = [40,50,60];
   Return the last item in the given array.
 */
 
-//Code Here
+const last = (arr => arr[arr.length-1]);
 
 
 
@@ -47,7 +50,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
   Loop through the given array and alert every item in the array.
 */
 
-//Code Here
+const looper = (arr) => {
+  for(i=0;i<arr.length;i++){
+    alert(arr[i]);
+  };
+};
 
 
 
@@ -62,7 +69,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   Loop through the given array backwards alerting every item in the array starting at the end.\
 */
 
-//Code Here
+const reversedLooper = (arr) => {
+  for(i=arr.length-1;i>=0;i--){
+    alert(arr[i]);
+  }
+}
 
 
 
@@ -77,7 +88,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
   Return only the even numbers from the array.
 */
 
-//Code Here
+const evenFinder = (arr) => {
+  evensArray = [];
+  for(i=0;i<arr.length;i++){
+    if(arr[i]%2===0){
+      evensArray.push(arr[i]);
+    }
+  }
+ return evensArray;
+}
 
 
 
@@ -94,7 +113,20 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+const divider = (arr) => {
+  var divided = [];
+  var odds = [];
+  var evens = [];
+  for(i=0;i<arr.length;i++){
+    if(arr[i]%2===0){
+     evens.push(arr[i]);
+    }
+    else{
+      odds.push(arr[i]);
+    };
+  }
+  return [evens, odds];
+};
 
 
 
@@ -115,7 +147,15 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
+const finder = (num) => {
+  var random =  getRandomArbitrary();
+  if(num.indexOf(random)>=0){
+      return true;
+  }
+  else{
+      return false;
+  }
+ };
 
 
 
@@ -142,7 +182,22 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 */
 
-//Code Here
+const removeItem = (list,listed)=>{
+  if(!Array.isArray(list)){
+    return [];
+  }
+  if(list.indexOf(listed)>=0){
+    list.splice(list.indexOf(listed),1);
+  }
+  return list;
+}
+const addItem = (list,add)=>{
+  if(!Array.isArray(list)){
+    return [];
+  }
+  list.push(add);
+   return list;
+}
 
 
 
@@ -152,7 +207,11 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
+const maker = [];
+for(i=0;i<215;i++){
+  maker.push(i);``
+}
+return maker;
 
 
 
