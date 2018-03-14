@@ -23,7 +23,6 @@ const first = (arr) => {
 
 
 
-
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
@@ -207,11 +206,13 @@ const addItem = (list,add)=>{
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-const maker = [];
-for(i=0;i<215;i++){
-  maker.push(i);``
+const maker = ()=>{
+  var newArray = [];
+for(i=1;i<=215;i++){
+  newArray.push(i);
+ }
+ return newArray;
 }
-return maker;
 
 
 
@@ -230,7 +231,7 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 const addTen = (numbers)=>{
   var plusTen = [];
   for(i=0;i<numbers.length;i++){
-    plusTen.push(numbers[i]+10);
+    plusTen.push(+numbers[i]+10);
  }
  return plusTen;
 }
@@ -258,7 +259,14 @@ for(var i = 0; i < num2; i++){
   Return the array which is longest.
 */
 
-//Code Here
+const longer = (arr1,arr2) =>{
+  if(arr1.length>arr2.length){
+    return arr1;
+  }
+  else{
+    return arr2;
+  }
+}
 
 
 
@@ -270,7 +278,15 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+const both = (arr1,arr2)=>{
+const bothArray = [];
+for(i=0;i<arr1.length;i++){
+  if(arr2.indexOf(arr1[i])>=0){
+    bothArray.push(arr1[i]);
+  }
+}
+return bothArray;
+}
 
 
 
@@ -310,19 +326,27 @@ var colt = {
   After that console.log the length of the Array and make sure that it's equal to 4. 
 */
 
-//Code Here
-
-
+devMountainEmployees.push(tyler);
+devMountainEmployees.push(cahlan);
+devMountainEmployees.push(ryan);
+devMountainEmployees.push(colt);
+console.log(devMountainEmployees.length);
 
 /*
   Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
 
-//Code Here
-
-
-
+//const byeCahlan = ()=>{ 
+  for(i=0;i<devMountainEmployees.length;i++){
+    if(devMountainEmployees[i].name==='Cahlan'){
+  devMountainEmployees.splice(i,1);
+  console.log(devMountainEmployees);
+  }
+}
+//return devMountainEmployees;
+//
+//byeCahlan();
 ////////// PROBLEM 13 //////////
 
 
@@ -331,7 +355,7 @@ var colt = {
   Create an empty array called users.
 */
 
-//Code Here
+const users = [];
 
 
 
