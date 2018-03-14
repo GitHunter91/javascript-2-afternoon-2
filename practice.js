@@ -227,7 +227,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
+const addTen = (numbers)=>{
+  var plusTen = [];
+  for(i=0;i<numbers.length;i++){
+    plusTen.push(numbers[i]+10);
+ }
+ return plusTen;
+}
 
 
 
