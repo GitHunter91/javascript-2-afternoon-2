@@ -374,7 +374,28 @@ var user1 = {
 };
 // Do not edit the code above.
 
-//Code Here
+const user2 = {
+  name:'john',
+  email:'j@email.com',
+  password:'password',
+  username:'john'
+}
+ const user3 = {
+  name:'david',
+  email:'d@email.com',
+  password:'password',
+  username:'david'
+}
+const user4 = {
+  name:'jessica',
+  email:'j2@email.com',
+  password:'password',
+  username:'jessica'
+}
+users.push(user1);
+users.push(user2);
+users.push(user3);
+users.push(user4);
 
 
 
@@ -387,8 +408,13 @@ var user1 = {
   Loop through your array of objects until you find Tyler's account (use tylermcginnis33@gmail.com to find him).
   Once you find the particular index he's located in, delete him from the array.
 */
-
-//Code Here
+// const byeTyler = ()=>{
+for(i=0;i<users.length;i++){
+  if(users[i].email==='tylermcginnis33@gmail.com'){
+    users.splice(i,1);
+  }
+}
+console.log(users);
 
 
 
