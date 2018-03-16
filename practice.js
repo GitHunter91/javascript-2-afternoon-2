@@ -156,7 +156,17 @@ const finder = (num) => {
   }
  };
 
-
+// const finder = (num)=>{
+// var x = getRandomArbitrary();
+//   for(i=0;i<num.length;i++){
+//     if(num[i]===x){
+//       return true;
+//     }
+//     else if(num[i]!=x){
+//       return false;
+//     }
+//   }
+// }
 
 ////////// PROBLEM 8 //////////
 
